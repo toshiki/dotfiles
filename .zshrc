@@ -33,7 +33,8 @@ alias rm="rm -i"
 alias cp="cp -i"
 alias mv="mv -i"
 
-alias la="ls -lhAF --color=auto"
+#alias la="ls -lhAF --color=auto"
+alias la="ls -lhAF"
 alias cl="make -f ~/Makefile clean"
 alias ps="ps -fU`whoami` --forest"
 
