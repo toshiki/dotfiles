@@ -140,6 +140,11 @@ if has('gui_macvim')
     map <silent> gw :macaction selectNextWindow:
     map <silent> gW :macaction selectPreviousWindow:
 endif
+" window操作
+nnoremap + 3<C-w>+
+nnoremap - 3<C-w>-
+nnoremap { 3<C-w><
+nnoremap } 3<C-w>>
 
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
 

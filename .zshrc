@@ -26,7 +26,8 @@ setopt pushd_ignore_dups
 setopt nolistbeep
 setopt list_packed
 
-alias ls="ls -vF"
+alias ls="ls -G -w"
+#alias ls="ls -vF"
 alias pwd="pwd -P"
 alias rr="rm -rf"
 alias rm="rm -i"

@@ -10,7 +10,7 @@
     ad = add
     ci = commit -v
     st = status
-    co = chechout
+    co = checkout
     f = fetch
     pr = pull --rebase
     d = diff
