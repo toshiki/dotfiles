@@ -96,7 +96,8 @@ set smarttab
 " encoding
 set termencoding=utf-8
 set encoding=utf-8
-set fileencodings=ucs-bom,iso-2022-jp-3,iso-2022-jp-2,euc-jisx0213,euc-jp,cp932
+"set fileencodings=ucs-bom,iso-2022-jp-3,iso-2022-jp-2,euc-jisx0213,euc-jp,cp932
+set fileencodings=utf-8,ucs-bom,iso-2022-jp-3,iso-2022-jp-2,euc-jisx0213,euc-jp,cp932
 set fileformats=unix,dos,mac
 set fileformat=unix
 
@@ -146,14 +147,9 @@ nnoremap - 3<C-w>-
 nnoremap { 3<C-w><
 nnoremap } 3<C-w>>
 
-highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
-
-highlight WideSpace ctermbg=blue guibg=blue
-highlight EOLSpace ctermbg=red guibg=red
-function! s:highlight_spaces()
-    match WideSpace "$B!!(B"
-    match EOLSpace /\s\+$/
-endf
-
-call s:highlight_spaces()
 map <C-s> :up<CR>
+
+scriptencoding utf-8
+highlight IgnoreSpace ctermbg=red guibg=red
+autocmd Colorscheme * highlight IgnoreSpace ctermbg=red guibg=red
+autocmd VimEnter,WinEnter * match IgnoreSpace /\s\+$\|^　\|　$/
